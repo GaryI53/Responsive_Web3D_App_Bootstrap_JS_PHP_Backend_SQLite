@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mobile 3D Apps Lab 1 - 2022</title>
+  
+  <!-- Required meta tags -->  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+  
+  
+  <!-- Font awesome fonts, both css and js versions installed, js SVG versions will override if they are available -->
+  <!-- Font Awesome Webfonts -->
+  <link rel="stylesheet" href="css/all.css">
+  
+  <!-- Font Awesome SVG - Note if you use custom.css to change color or other features, all.js will overwrite.-->
+  <!--<script defer src="js/all.js"></script>-->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Link in some fonts temporarily — Not used because we finally installed the fonts  
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+ -->
+
+</head>
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <div class="logo">
+          <a class="navbar-brand" href="#">
+          <h1>1</h1>
+          <h1>oca</h1>
+          <h2>Cola</h2>
+          <h3>Journey</h3>
+          <p>Refreshing the world, one story at a time</p>
+          </a>
+        </div>
+
+          
+
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGeneral" aria-controls="navbarGeneral" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarGeneral">
+                
+    <ul class="nav navbar-nav navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item ">
+                       <a href="http://users.sussex.ac.uk/~gi53/3dapp/submission/submission.html" class="nav-link active">Home 
+                        </a>
+                    
+              
+                <li class="nav-item">
+                        <a href="http://localhost:8080/home4" class="nav-link">About
+                        </a>
+                    
+                </li>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Drinks
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="http://users.sussex.ac.uk/~gi53/3dapp/submission/CocaCola.html">Coca Cola</a></li>
+            <li><a class="dropdown-item" href="http://users.sussex.ac.uk/~gi53/3dapp/submission/Sprite.html">Sprite</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="http://users.sussex.ac.uk/~gi53/3dapp/submission/CocaColaFridge.html">Coca Cola fridge</a></li>
+          </ul>
+        </li>
+        </ul>
+
+         </nav>
+     
+
+
+
+
+
+
+    <!-- This is the main contents of the page, it has a background image across 1 column, followed by three columns holding cards in a row for the 3 images and associated texts
+    -->
+    <div class="container-fluid main_contents">
+        <!--  
+          <h3>Navbar With Dropdown</h3>
+          <p>This example adds a dropdown menu in the navbar.</p>
+          <p>JQuery, Popper and Boostrap 4.6 libraries installed and tested.</p>
+        -->
+
+        <div class="row"> <!-- Main_3D Image or Carousel -->
+          <div class ="col-sm-12">
+            <div id="main_3d_image">
+                <div id="main_text" class="col-xs-12 col-sm-4">
+                  <h2>Coca Cola Great Britain</h2>
+                  <h3>Founded by Dr John S Pemberton</h3>
+                  <p>You have reached the index page. Please go to https://users.sussex.ac.uk/~gi53/3dapp/submission/submission.html p>
+                </div>
+            </div> 
+          </div>
+        </div>
+        <div class="row">
+            <!-- Coca Cola column -->
+            <div class="col-sm-4">
+                <div class="card">
+                    <a href=""></a>
+                      <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coke">
+                    </a>
+                    <div class="card-body">
+                      <h3 class="card-title">Coca Cola</h4>
+                      <p class="card-text">You have gone to the index page instead of the submission page as requested in the coursework brief, please visit  https://users.sussex.ac.uk/~gi53/3dapp/submission/submission.htmlp>    
+                      <a href="#" class="btn btn-primary">Find out more ...</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sprite column -->
+            <div class="col-sm-4">
+                <div class="card">
+                    <a href=""></a>
+                      <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
+                    </a>
+                    <div class="card-body">
+                      <h3 class="card-title">Sprite</h4>
+                      <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink and is sold in more than 190 different countries. Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories.</p>
+                      <a href="#" class="btn btn-primary">Find out more ...</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Dr Pepper column -->
+            <div class="col-sm-4">
+                <div class="card">
+                    <a href=""></a>
+                      <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                    </a>
+                    <div class="card-body">
+                      <h3 class="card-title">Dr Pepper</h4>
+                      <p class="card-text">Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on. It was created by Texas pharmacist Charles Alderton in 1885.</p>
+                      <a href="#" class="btn btn-primary">Find out more ...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <div class="navbar-text float-left copyright">
+            <p><span class="align-baseline"></span>&copy 2023 Mobile Web 3D Applications </span></p>
+</div>
+<nav class="navbar-text float-right social">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+</div>
+</nav>
+        
+       
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    -->
+    
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+</html>

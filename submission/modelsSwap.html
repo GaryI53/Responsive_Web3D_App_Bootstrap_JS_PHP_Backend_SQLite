@@ -1,0 +1,200 @@
+ <!--  -------------------------------- ------------------------------------>
+<!-------------------  main contents of the Models page ------------------->
+ <!--  ----------------------------------------------------------------- -->
+
+
+
+
+
+
+ <div class="row">
+  <div class="col-lg-6">
+
+    <!-- Navbar above X3D model-->
+    <style>
+      .model-nav .nav-link {
+          background-color: rgba(139, 0, 0, 0.7);
+          color: white;
+          border-radius: 5px;
+          margin: 3px;
+      }
+      .model-nav .nav-link:hover {
+          background-color: rgba(90, 0, 0, 0.7);
+      }
+      .model-nav .nav-link.active {
+          background-color: rgba(90, 0, 0, 0.9);
+          color: white;
+      }
+      .model-nav {
+          margin-top: 20px; /* Adjust this value for more or less space */
+      }
+    </style>
+
+    
+
+  <h3>Model Selection</h3>
+  <div class="model-nav">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" id="cokeLink" href="#">Coke</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="spriteLink" href="#">Sprite</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="fridgeLink" href="#">CocaColafridge</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="drPepCup" href="#">DrPepperCup</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <!-- Viewport for X3D model-->
+    <head>
+      <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+      <title>3D Web App</title>
+      <script type="text/javascript" src="http://www.x3dom.org/download/x3dom.js"></script>
+      <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css" />
+    </head>
+    <body>
+      <div id="x3d-container" style="position: relative;">
+        <x3d id="x3dElement">
+          <scene>
+            <Switch id="modelSwitch" whichChoice="0">
+              <Transform id="objectTransform">
+                <Inline id="modelInline" url="assets/X3D/cokeCanredone.x3d" />
+              </Transform>
+            </Switch>
+
+            <Viewpoint id="viewpoint" position="0 0 -10" orientation="0 1 0 3.14159"></Viewpoint>
+
+          </scene>
+        </x3d>
+      </div>
+
+      <script>
+        function resize() {
+          var x3dElement = document.getElementById("x3dElement");
+          x3dElement.setAttribute("width", window.innerWidth + "px");
+          x3dElement.setAttribute("height", window.innerHeight + "px");
+        }
+
+        window.addEventListener("resize", resize);
+        window.addEventListener("load", resize);
+      </script>
+    </body>
+
+    <!-- Writing underneath X3D model -->
+    <h3 class="card-title"><div id="modelTitle"></div></h3>
+    <p class="card-text"><div id="modelDescription"></div></p>
+
+    <!-- Camera Buttons -->
+    <style>
+     .btn-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+    width: 100%;  /* Ensure the button box takes the full width of its container */
+}
+
+.btn-box button {
+    flex: 1 1 auto;  /* This allows the buttons to grow and shrink as necessary */
+    border: none;
+    background-color: rgba(139, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+}
+
+      .btn-box button:hover {
+          background-color: rgba(90, 0, 0, 0.7);
+      }
+      .btn-box h3 {
+          width: 100%;
+          margin: 10px 5px;
+      }
+      
+    </style>
+
+    <!-- Button Box -->
+    <!-- Camera Controls -->
+    <div class="btn-box">
+      <h3>Camera Controls</h3>
+      <button id="front" type="button">Front</button>
+      <button id="back" type="button">Back</button>
+      <button id="left" type="button">Left</button>
+      <button id="right" type="button">Right</button>
+      <button id="top" type="button">Top</button>
+      <button id="bottom" type="button">Bottom</button>
+      <button id="off" type="button">On/Off</button>
+    </div>
+
+    <!-- Animation Buttons -->
+    <div class="btn-box">
+      <h3>Animation</h3>
+      <button id="orbit" type="button">Orbit</button>
+      <button id="rotateObjectX" type="button">Rotate Object X</button>
+      <button id="rotateObjectY" type="button">Rotate Object Y</button>
+      <button id="bounceObject" type="button">Bounce Object</button>
+      <button id="stop" type="button">Stop</button>
+    </div>
+
+    <!-- Lighting and Render Options Buttons -->
+    <div class="btn-box">
+      <h3>Lighting and Render Options</h3>
+      <button id="cokeLinkWF" type="button">Coke Wireframe</button>
+      <button id="spriteLinkWF" type="button">Sprite Wireframe</button>
+      <button id="fridgeLinkWF" type="button">Fridge Wireframe</button>
+      <button id="drPepCupWF" type="button">Dr Pepper Wireframe</button>
+      <button id="Headlight" type="button">Increase Headlight</button>
+      <button id="turnOffHeadlight" type="button">Reduce Headlight</button>  
+    </div>
+
+  </div>
+
+  <!-- Image Gallery -->
+  <div class="col-lg-6">
+
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">X3D Photo Gallery</h5>
+        <p class="card-text">Click on the images to view the gallery.</p>
+        <div class="row">
+          <div class="col-6">
+            <a href="images/coke.png" data-lightbox="gallery" data-title="Blender Coke Can"><img src="images/coke.png" alt="Image 1" class="img-fluid card-img"></a>
+          </div>
+          <div class="col-6">
+            <a href="images/cokef.png" data-lightbox="gallery" data-title="Blender Coke Fridge"><img src="images/cokef.png" alt="Image 2" class="img-fluid card-img"></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <a href="images/drPepper.png" data-lightbox="gallery" data-title="Blender Dr Pepper cup"><img src="images/drPepper.png" alt="Image 3" class="img-fluid card-img"></a>
+          </div>
+          <div class="col-6">
+            <a href="images/sprite.png" data-lightbox="gallery" data-title="Blender Sprite bottle">
+              <img src="images/sprite.png" alt="Image 4" class="img-fluid card-img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -------------------------------- -->
+<!--  End of contents of the Models page -->
+<!--  -------------------------------- -->
+
+

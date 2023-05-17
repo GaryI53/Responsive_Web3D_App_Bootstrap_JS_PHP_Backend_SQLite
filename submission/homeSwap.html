@@ -1,0 +1,81 @@
+<div> <style>
+  .text-background {
+    background: rgba(34, 31, 31, 0.603);  /* white with 50% transparency */
+    padding: 20px;  /* add some padding so the text isn't right up against the edge */
+    border-radius: 10px;  /* optional: round the corners of the white box */
+}
+.text-container {
+    position: absolute;
+    top: 25%;  /* halfway between center (50%) and top (0%) */
+    left: 25%;  /* halfway between center (50%) and left (0%) */
+   
+}
+</style>
+<div class="container-fluid main_contents">
+  <!-- Main_3D Image or Carousel -->
+  <div class="row">
+      <div class="col-sm-12">
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <!-- Coca Cola Card -->
+                  <div class="carousel-item active" data-bs-interval="3000">
+                      <div class="card text-white">
+                          <div class="card-img-overlay d-flex">
+                              <div class="dark-overlay"></div>
+                              <div class="my-auto mx-auto text-right text-container text-background">
+
+                                  <h3 class="card-title">Coca Cola</h3>
+                                  <p class="card-text">It was 1886, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity...</p>
+                                  <a href="#" class="btn btn-primary">Find out more ...</a>
+                              </div>
+                          </div>
+                          <img src="assets/images/coke-bg.jpg" class="card-img-top" alt="Coke">
+                      </div>
+                  </div>
+                  <!-- Sprite Card -->
+                  <div class="carousel-item" data-bs-interval="3000">
+                      <div class="card text-white">
+                          <div class="card-img-overlay d-flex">
+                              <div class="dark-overlay"></div>
+                              <div class="my-auto mx-auto text-right text-container text-background">
+
+                                  <h3 class="card-title">Sprite</h3>
+                                  <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink...</p>
+                                  <a href="#" class="btn btn-primary">Find out more ...</a>
+                              </div>
+                          </div>
+                          <img src="assets/images/sprite-bg.jpg" class="card-img-top" alt="Sprite">
+                      </div>
+                  </div>
+                  <!-- Dr Pepper Card -->
+                  <div class="carousel-item" data-bs-interval="3000">
+                      <div class="card text-white">
+                          <div class="card-img-overlay d-flex">
+                              <div class="dark-overlay"></div>
+                              <div class="my-auto mx-auto text-right text-container text-background">
+
+                                  <h3 class="card-title">Dr Pepper</h3>
+                                  <p class="card-text">Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century...</p>
+                                  <a href="#" class="btn btn-primary">Find out more ...</a>
+                              </div>
+                          </div>
+                          <img src="assets/images/drpepper-bg.jpg" class="card-img-top" alt="Dr Pepper">
+                      </div>
+                  </div>
+              </div>
+              <!-- Carousel controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+  
+</div>

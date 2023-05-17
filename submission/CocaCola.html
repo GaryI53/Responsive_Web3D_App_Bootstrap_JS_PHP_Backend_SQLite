@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <title>Mobile 3D Apps</title>
+  
+  <!-- Required meta tags -->  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Photo Gallery Ajax,LightBox 2 gallery -->  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">    <!-- In both -->  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+ <!-- custom CSS for making the navbar above the X3D model look better -->
+
+ <link rel="stylesheet" href="css/x3dnav.css">  
+
+ <!-- Gallery Styling -->
+ <link rel="stylesheet" href="css/galleryStyle.css">   
+
+  <!-- Font Awesome Webfonts -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- In both -->  
+   
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">  <!-- In both -->  
+   <link rel="stylesheet" href="css/all.css">  <!-- In both -->  
+
+    <!-- JS -->
+   <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+
+
+    <!-- Popper CSS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+
+
+<!-- Top Navbar -->
+<!-- Logo top left -->
+
+    <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <div class="logo">
+          <a class="navbar-brand" href="#">
+          <h1>1</h1>
+          <h1>oca</h1>
+          <h2>Cola</h2>
+          <h3>Coursework</h3>
+          <p>Refreshing the world, one Coursework at a time</p>
+          </a>
+        </div>
+
+          
+
+
+<!-- Top right links navbar -->
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGeneral" aria-controls="navbarGeneral" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarGeneral">
+  <!-- Home -->
+  <ul class="nav navbar-nav navbar-nav ms-auto mb-2 mb-lg-0 ">
+    <li class="nav-item">
+      <a href="homeSwap.html" class="nav-link active" id="home-link">Home</a>
+    </li>
+    <!-- About -->
+    <li class="nav-item">
+      <a href="aboutSwap.html" class="nav-link active" id="about-link">About</a>
+    </li>
+    <!-- Models -->
+    <li class="nav-item">
+      <a href="modelsSwap.html" class="nav-link active" id="models-link">Models</a>
+    </li>
+  </ul>
+</div>
+</div>
+</nav>
+     
+
+
+
+
+
+
+<div id="content">
+
+    <!--  -------------------------------- ------------------------------------>
+    <!-------------------  main contents of the Models page ------------------->
+     <!--  ----------------------------------------------------------------- -->
+
+ <!-- Navbar above X3D model-->
+    <div class="row">
+      <div class="col-lg-6"> 
+        <div class="card-body"style="padding-left: 15px;">
+         
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" id="cokeLink" href="#">Coke</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="spriteLink" href="#">Sprite</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="fridgeLink" href="#">CocaColafridge</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="drPepCup" href="#">DrPepperCup</a>
+            </li>
+          </ul>
+    
+
+
+
+          
+          <!-- Viewport for X3D model-->
+          <head>
+            <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+            <title>3D Web App</title>
+            <script type="text/javascript" src="http://www.x3dom.org/download/x3dom.js"></script>
+            <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css" />
+        </head>
+        <body>
+            <div id="x3d-container" style="position: relative; width: 100vw; height: 100vh;">
+                <x3d style="width:50%; height:50%;">
+                    <scene>
+                        <Switch id="modelSwitch" whichChoice="0">
+                            <Transform id="objectTransform">
+                                <Inline id="modelInline" url="assets/X3D/cokeCanredone.x3d" />
+                            </Transform>
+                        </Switch>
+        
+                        <Viewpoint id="viewpoint" position="0 0 10" orientation="0 0 1 0"></Viewpoint>
+                    </scene>
+                </x3d>
+            </div>
+        
+    
+          <!-- Writing underneath X3D model -->
+          <h3 class="card-title"><div id="modelTitle"></div></h3>
+          <p class="card-text"><div id="modelDescription"></div></p>
+
+
+           <!-- Camera Buttons -->
+          <div class="card text-left">
+            <div class="card-header">Camera Controls</div>
+            <div class="card-body">
+              <button id="front" type="button" class="btn btn-warning">Front</button>
+              <button id="back" type="button" class="btn btn-warning">Back</button>
+              <button id="left" type="button" class="btn btn-warning">Left</button>
+              <button id="right" type="button" class="btn btn-warning">Right</button>
+              <button id="top" type="button" class="btn btn-warning">Top</button>
+              <button id="off" type="button" class="btn bg-transparent">Off</button>
+            </div>
+          </div>
+          
+           <!-- Animation Buttons -->
+          <div class="card text-left">
+            <div class="card-header">Animation</div>
+            <div class="card-body">
+             <button id="orbit" type="button" class="btn btn-warning">Orbit</button>
+              <button id="rotateObjectX" type="button" class="btn btn-warning">Rotate Object X</button>
+              <button id="rotateObjectY" type="button" class="btn btn-warning">Rotate Object Y</button>
+              <button id="bounceObject" type="button" class="btn btn-warning">Bounce Object</button>
+              <button id="stop" type="button" class="btn btn-warning">stop</button>
+            </div>
+          </div>
+          
+           <!-- Lighting and Render Options Buttons -->
+          <div class="card text-left">
+            <div class="card-header">Lighting and Render Options</div>
+            <div class="card-body">
+              <button id="cokeLinkWF" type="button" class="btn btn-warning">Coke Wireframe</button>
+              <button id="spriteLinkWF" type="button" class="btn btn-warning">Sprite Wireframe</button>
+              <button id="fridgeLinkWF" type="button" class="btn btn-warning">Fridge Wireframe</button>
+              <button id="drPepCupWF" type="button" class="btn btn-warning">Dr Pepper Wireframe</button>
+              <button id="Headlight" type="button" class="btn btn-warning">increase Headlight</button>
+              <button id="turnOffHeadlight" type="button" class="btn btn-warning">Reduce Headlight</button>  
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Image Gallery -->
+     <!-- Image Gallery -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 ml-auto">
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">X3D Photo Gallery</h5>
+          <p class="card-text">Click on the images to view the gallery.</p>
+          <div class="row">
+            <div class="col-12 mb-2">
+              <a href="images/coke.png" data-lightbox="gallery" data-title="Blender Coke Can"><img src="images/coke.png" alt="Image 1" class="img-fluid card-img"></a>
+            </div>
+            <div class="col-12 mb-2">
+              <a href="images/cokef.png" data-lightbox="gallery" data-title="Blender Coke Fridge"><img src="images/cokef.png" alt="Image 2" class="img-fluid card-img"></a>
+            </div>
+            <div class="col-12 mb-2">
+              <a href="images/drPepper.png" data-lightbox="gallery" data-title="Blender Dr Pepper cup"><img src="images/drPepper.png" alt="Image 3" class="img-fluid card-img"></a>
+            </div>
+            <div class="col-12">
+              <a href="images/sprite.png" data-lightbox="gallery" data-title="Blender Sprite bottle">
+                <img src="images/sprite.png" alt="Image 4" class="img-fluid card-img">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+
+
+
+ <!--  -------------------------------- -->
+    <!--  End of contents of the Models page -->
+     <!--  -------------------------------- -->
+
+    </div>
+
+  </div>
+
+
+
+
+
+<!-- NavbarBlack-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar_coca_cola footer">
+    <div class="container-fluid">
+        <div class="navbar-text float-left copyright">
+            <p><span class="align-baseline"></span>&copy 2023 Mobile Web 3D Applications </span></p>
+        </div>
+        <div class="navbar-text float-right">
+            <button class="theme-button" id="dark-theme">Dark Theme</button>
+            <button class="theme-button" id="light-theme">Light Theme</button>
+            <a class="theme-button btn btn-dark" id="reset-theme" href="http://users.sussex.ac.uk/~gi53/3dapp/submission/CocaCola.html">Reset</a>
+        </div>
+    </div>
+
+
+
+<!-- Social Media buttons-->
+<nav class="navbar-text float-right social">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+</div>
+</nav>
+
+        
+<script src="contentSwitch.js"></script>   
+<script src="js/jquery-file.js"></script>
+<script src="js/themeChange.js"></script>
+   
+</body>
+</html>
