@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Mobile 3D Apps</title>
+  
+  <!-- Required meta tags -->  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("cokeLink").addEventListener("click", function () {
+    loadModel("assets/X3D/cokeCanredone.x3d");
+  });
+
+  document.getElementById("spriteLink").addEventListener("click", function () {
+    loadModel("assets/X3D/spriteBottle.x3d");
+  });
+
+  document.getElementById("fridgeLink").addEventListener("click", function () {
+    loadModel("assets/X3D/cokeFridgeRedone.x3d");
+  });
+});
+
+
+
+
+
+
+function loadModel(url) {
+  document.getElementById("modelInline").setAttribute("url", url);
+}
+
+
+
+
+
+
+</script>
+
+
+
+<!-- custom CSS for making the navbar above the X3D model look better -->
+
+
+<head>
+  
+  <style>
+    .custom-nav {
+      margin-left: 30px;
+margin-top: 30px;
+    }
+
+
+
+  </style>
+  
+</head>
+
+
+
+
+
+
+
+  
+  
+  <!-- Font awesome fonts, both css and js versions installed, js SVG versions will override if they are available -->
+  <!-- Font Awesome Webfonts -->
+  <link rel="stylesheet" href="css/all.css">
+  
+  <!-- Font Awesome SVG - Note if you use custom.css to change color or other features, all.js will overwrite.-->
+  <!--<script defer src="js/all.js"></script>-->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Link in some fonts temporarily — Not used because we finally installed the fonts  
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+ -->
+
+</head>
+<body>
+
+
+
+<!-- Top Navbar -->
+<!-- Logo top left -->
+
+    <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <div class="logo">
+          <a class="navbar-brand" href="#">
+          <h1>1</h1>
+          <h1>oca</h1>
+          <h2>Cola</h2>
+          <h3>Journey</h3>
+          <p>Refreshing the world, one story at a time</p>
+          </a>
+        </div>
+
+          
+
+
+<!-- Top right navbar -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGeneral" aria-controls="navbarGeneral" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarGeneral">
+                
+    <ul class="nav navbar-nav navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item ">
+                       <a href="http://users.sussex.ac.uk/~gi53/3dapp/Lab1/" class="nav-link active">Home 
+                        </a>
+                    
+              
+                <li class="nav-item">
+                        <a href="http://localhost:8080/home4" class="nav-link">About
+                        </a>
+                    
+                </li>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Drinks
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="http://users.sussex.ac.uk/~gi53/3dapp/Lab1/CocaCola.html">Coca Cola</a></li>
+            <li><a class="dropdown-item" href="http://users.sussex.ac.uk/~gi53/3dapp/Lab1/Sprite.html">Sprite</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="http://users.sussex.ac.uk/~gi53/3dapp/Lab1/CocaColaFridge.html">Coca Cola fridge</a></li>
+          </ul>
+        </li>
+        </ul>
+
+         </nav>
+     
+
+
+
+
+
+
+    <!-- This is the main contents of the page, it has a background image across 1 column, followed by three columns holding cards in a row for the 3 images and associated texts
+    -->
+
+
+    <div class="container-fluid main_contents">
+ 
+<div class="row">
+
+            <!-- Column to hold X3D model -->
+            <div class="col-sm-10">
+                <div class="card text-left">
+                    <div class="card-header">
+<div id="main_3d_image"></div>
+
+</div>
+
+ 
+<div class="card-body">
+
+
+
+<!-- Navbar above X3D model-->
+
+
+<ul class="nav nav-tabs card-header-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" id="cokeLink" href="#">Coke</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="spriteLink" href="#">Sprite</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="fridgeLink" href="#">CocaColafridge</a>
+  </li>
+</ul>        </li>
+
+</ul>
+
+ </nav>
+
+
+
+
+
+<!-- Viewport for X3D model-->
+
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <title>3D Web App</title>
+    <script type="text/javascript" src="http://www.x3dom.org/download/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css" />
+</head>
+<body>
+   <div id="x3d-container" style="position: relative;">
+    <x3d width="800px" height="600px">
+        <scene>
+            <Switch id="modelSwitch" whichChoice="0">
+                <Inline id="modelInline" url="assets/X3D/cokeCanredone.x3d" />            </Switch>
+
+            <Viewpoint id="viewpoint" position="0 0 10" orientation="0 0 1 0"></Viewpoint>
+        </scene>
+    </x3d>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Writing underneath X3D model -->
+
+
+<h3 class="card-title">Coca Cola X3D</h4>
+                         
+
+<p class="card-text"> This X3D model of the coke can has been created in Blender. exported to VRML97 and converted, using the instantreality
+transcoders. to X3D for display online. </p> 
+        
+<button id="front" type="button" class="btn btn-warning">Front</button>
+<button id="back" type="button" class="btn btn-warning">Back</button>
+<button id="left" type="button" class="btn btn-warning">Left</button>
+<button id="right" type="button" class="btn btn-warning">Right</button>
+<button id="top" type="button" class="btn btn-warning">Top</button>
+<button id="off" type="button" class="btn bg-transparent">Off</button>
+
+    
+                      
+                    </div>
+                </div>
+            </div>
+
+
+
+
+<!-- Image Gallery -->
+
+<div class="col-sm-2">
+<div class="card text-left">
+<div class="card-header">
+3D Image Gallery
+</div>
+<a href="http://users.sussex.ac.uk/~gi53/3dapp/Lab1/CocaCola.html">
+<img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg"
+alt="Coca Cola">
+</a>
+<a href="http://users.sussex.ac.uk/~gi53/3dapp/Lab1/Sprite.html">
+<img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg"
+alt="Coca Cola">
+</a>
+<a href="http://users.sussex.ac.uk/~gi53/3dapp/Lab1/CocaColaFridge.html">
+<img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg"
+alt="Coca Cola">
+</a>
+<p class="card-text"> 3D images rendered in Blender 2023 Gary Isherwood</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Below cameras writing -->
+
+
+        <div class="row">
+            <!-- Coca Cola column -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <a href=""></a>
+                     
+                    </a>
+                    <div class="card-body">
+                      <h3 class="card-title">Coca Cola</h4>
+                      <p class="card-text">Atlanta Behinnings: It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled. Like many people who change history, John Pemberton, an Atlanta phramacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs' Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a glass.</p>    
+                      <a href="#" class="btn btn-primary">Find out more ...</a>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+
+    </div>
+
+
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <div class="navbar-text float-left copyright">
+            <p><span class="align-baseline"></span>&copy 2023 Mobile Web 3D Applications </span></p>
+</div>
+<nav class="navbar-text float-right social">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+</div>
+</nav>
+        
+       
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    -->
+    
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+
+
+<!-- Camera orientation and position-->
+
+<script>document.getElementById("front").addEventListener("click", function() {
+    document.getElementById("viewpoint").setAttribute("position", "0 0 -10");
+    document.getElementById("viewpoint").setAttribute("orientation", "0 1 0 3.14159");
+});
+document.getElementById("back").addEventListener("click", function() {
+    document.getElementById("viewpoint").setAttribute("position", "0 0 10");
+    document.getElementById("viewpoint").setAttribute("orientation", "0 0 1 0");
+});
+
+document.getElementById("left").addEventListener("click", function() {
+    document.getElementById("viewpoint").setAttribute("position", "-10 0 0");
+    document.getElementById("viewpoint").setAttribute("orientation", "0 1 0 -1.57079");
+});
+document.getElementById("right").addEventListener("click", function() {
+    document.getElementById("viewpoint").setAttribute("position", "10 0 0");
+    document.getElementById("viewpoint").setAttribute("orientation", "0 1 0 1.57079");
+});
+document.getElementById("top").addEventListener("click", function() {
+    document.getElementById("viewpoint").setAttribute("position", "0 8 0");
+    document.getElementById("viewpoint").setAttribute("orientation", "1 0 0 -1.57079");
+});
+
+    document.getElementById("off").addEventListener("click", function() {
+        const switchNode = document.getElementById("modelSwitch");
+        if (switchNode.getAttribute("whichChoice") === "0") {
+            switchNode.setAttribute("whichChoice", "-1");
+        } else {
+            switchNode.setAttribute("whichChoice", "0");
+        }
+    });
+function setDefaultView() {
+    document.getElementById("viewpoint").setAttribute("position", "0 0 -10");
+    document.getElementById("viewpoint").setAttribute("orientation", "0 1 0 3.14159");
+}
+
+window.onload = setDefaultView;
+</script>
+
+
+</html>
